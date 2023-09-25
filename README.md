@@ -24,3 +24,4 @@ The following assumptions made in the development process:
 2. Assummed one endpoint files with optional parameter "prefix" will be enough
 3. Assummed the read and processing of the tree.json is done on application startup (post construct)
 4. Created a cache in form of a Map with a key of the file path and a value of FileModel to get faster results in case of search by prefix
+5. Return results from type FileResponse (extends FileModel) to include also the path of file
