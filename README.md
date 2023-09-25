@@ -16,3 +16,11 @@ You can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/do
 ```shell
 mvn spring-boot:run
 ```
+
+## Assumptions
+
+The following assumptions made in the development process:
+1. Created FileModel class to represent each file in the tree.json file provdied
+2. Assummed one endpoint files with optional parameter "prefix" will be enough
+3. Assummed the read and processing of the tree.json is done on application startup (post construct)
+4. Created a cache in form of a Map with a key of the file path and a value of FileModel to get faster results in case of search by prefix
